@@ -93,7 +93,6 @@ for epoch in range(epochs):
         outputs = model(inputs)
         loss = criterion(outputs, targets)
 
-        # Backward and optimize
         optimizer.zero_grad()   # 梯度清零，因为每次计算都会保留上一次梯度
         loss.backward()         # 计算获取当前梯度
         optimizer.step()        # 根据梯度更新模型参数
